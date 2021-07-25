@@ -1,0 +1,86 @@
+[
+  {
+    "Year": "1973",
+    "CityName": null,
+    "CityCode": "1233",
+    "Percent": "95.4"
+  },
+  {
+    "Year": "1976",
+    "CityName": null,
+    "CityCode": "1262",
+    "Percent": "96.0"
+  },
+  {
+    "Year": "1979",
+    "CityName": null,
+    "CityCode": "1233",
+    "Percent": "95.3"
+  },
+  {
+    "Year": "1982",
+    "CityName": null,
+    "CityCode": "1262",
+    "Percent": "95.7"
+  },
+  {
+    "Year": "1985",
+    "CityName": null,
+    "CityCode": "0162",
+    "Percent": "94.5"
+  },
+  {
+    "Year": "1988",
+    "CityName": null,
+    "CityCode": "0162",
+    "Percent": "92.0"
+  },
+  {
+    "Year": "1991",
+    "CityName": null,
+    "CityCode": "0162",
+    "Percent": "93.0"
+  },
+  {
+    "Year": "1994",
+    "CityName": null,
+    "CityCode": "1233",
+    "Percent": "92.6"
+  },
+  {
+    "Year": "1998",
+    "CityName": null,
+    "CityCode": "0162",
+    "Percent": "88.2"
+  },
+  {
+    "Year": "2002",
+    "CityName": null,
+    "CityCode": "1262",
+    "Percent": "88.1"
+  },
+  {
+    "Year": "2006",
+    "CityName": null,
+    "CityCode": "1262",
+    "Percent": "89.7"
+  },
+  {
+    "Year": "2010",
+    "CityName": null,
+    "CityCode": "1262",
+    "Percent": "91.3"
+  },
+  {
+    "Year": "2014",
+    "CityName": null,
+    "CityCode": "1262",
+    "Percent": "92.9"
+  },
+  {
+    "Year": "2018",
+    "CityName": null,
+    "CityCode": "1262",
+    "Percent": "93.9"
+  }
+]
