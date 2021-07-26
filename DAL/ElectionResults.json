@@ -1,5 +1,89 @@
 [
   {
+    "CityCode": "00",
+    "CityName": null,
+    "Year": "1973",
+    "Percent": "90.8"
+  },
+  {
+    "CityCode": "00",
+    "CityName": null,
+    "Year": "1976",
+    "Percent": "91.8"
+  },
+  {
+    "CityCode": "00",
+    "CityName": null,
+    "Year": "1979",
+    "Percent": "90.7"
+  },
+  {
+    "CityCode": "00",
+    "CityName": null,
+    "Year": "1982",
+    "Percent": "91.4"
+  },
+  {
+    "CityCode": "00",
+    "CityName": null,
+    "Year": "1985",
+    "Percent": "89.9"
+  },
+  {
+    "CityCode": "00",
+    "CityName": null,
+    "Year": "1988",
+    "Percent": "86.0"
+  },
+  {
+    "CityCode": "00",
+    "CityName": null,
+    "Year": "1991",
+    "Percent": "86.7"
+  },
+  {
+    "CityCode": "00",
+    "CityName": null,
+    "Year": "1994",
+    "Percent": "86.8"
+  },
+  {
+    "CityCode": "00",
+    "CityName": null,
+    "Year": "1998",
+    "Percent": "81.4"
+  },
+  {
+    "CityCode": "00",
+    "CityName": null,
+    "Year": "2002",
+    "Percent": "80.1"
+  },
+  {
+    "CityCode": "00",
+    "CityName": null,
+    "Year": "2006",
+    "Percent": "82.0"
+  },
+  {
+    "CityCode": "00",
+    "CityName": null,
+    "Year": "2010",
+    "Percent": "84.6"
+  },
+  {
+    "CityCode": "00",
+    "CityName": null,
+    "Year": "2014",
+    "Percent": "85.8"
+  },
+  {
+    "CityCode": "00",
+    "CityName": null,
+    "Year": "2018",
+    "Percent": "87.2"
+  },
+  {
     "CityCode": "0114",
     "CityName": null,
     "Year": "1973",

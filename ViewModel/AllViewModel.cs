@@ -1,13 +1,19 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Text;
 using System.Web;
+using System.Web.Script.Serialization;
 
 namespace LearningWellTest.Models
 {
-    // All logik och beräkninar finns i denna klass
+    // All logik finns i denna klass
     public class AllViewModel
     {
 
@@ -21,6 +27,8 @@ namespace LearningWellTest.Models
 
         string electionResultsPath = HttpContext.Current.Server.MapPath("~/DAL/ElectionResults.json");
         string maximumPercentsPath = HttpContext.Current.Server.MapPath("~/DAL/MaximumPercents.json");
+        string resultsfromSCBPath = HttpContext.Current.Server.MapPath("~/DAL/DataFromSCB.json");
+        string SCBDataApiUrl = "http://api.scb.se/OV0104/v1/doris/sv/ssd/START/ME/ME0104/ME0104D/ME0104T4";
 
 
         public AllViewModel()
@@ -32,12 +40,31 @@ namespace LearningWellTest.Models
             ElectionResults = Newtonsoft.Json.JsonConvert.DeserializeObject<List<ElectionResult>>(jsonElectionResults);
         }
 
+        // Hämtar data från SCBs server
+        public void GetElectionResultsFromSCB()
+        {
+            var client = new RestClient(SCBDataApiUrl);
+
+            var request = new RestRequest();
+
+            var jsonSCBQuerys = File.ReadAllText(HttpContext.Current.Server.MapPath("~/DAL/SCBQuery.json"));
+
+            request.AddJsonBody(jsonSCBQuerys);
+
+            var respons = client.Post(request);
+
+            var convertToJson = JsonConvert.DeserializeObject<List<Result>>("[" + respons.Content + "]");
+
+            string output = JsonConvert.SerializeObject(convertToJson, Newtonsoft.Json.Formatting.Indented);
+            File.WriteAllText(resultsfromSCBPath, output);
+        }
 
         // Hämtar valresultat för varje stad
         public List<ElectionResult> GetElectionResults()
         {
+            GetElectionResultsFromSCB();
 
-            // Koden nedan hämtar resultaten från originalfilen: DataFromSCB.json och sätter de i filen: ElectionResults.json
+            // Koden nedan hämtar resultaten från filen: DataFromSCB.json och sätter de i filen: ElectionResults.json
             // för att presentera det på "finare" sätt
 
             foreach (var result in Results)
@@ -103,5 +130,6 @@ namespace LearningWellTest.Models
 
             return MaximumPercentList;
         }
+
     }
 }
