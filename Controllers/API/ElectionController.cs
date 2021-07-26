@@ -18,11 +18,14 @@ namespace LearningWellTest.Controllers.API
     {
         AllViewModel allViewModel = new AllViewModel();
 
-        // Hämtar all data från originalfilen: DataFromSCB.json
+        // Hämtar all data från filen: DataFromSCB.json
         [HttpGet]
         [Route("API/Election/GetDataFromSCB/")]
         public IHttpActionResult GetDataFromSCB()
         {
+            // Kör metoden GetElectionResultsFromSCB för att uppdatera DataFromSCB.json
+            allViewModel.GetElectionResultsFromSCB();
+
             var SCBData = allViewModel.Results.ToList();
 
             return Ok(SCBData);
